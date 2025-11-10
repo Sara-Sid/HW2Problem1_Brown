@@ -1,6 +1,6 @@
 public class FetchDataCommand implements Command{
-    private WeatherDataFetcher fetcher;
-    public FetchDataCommand(WeatherDataFetcher fetcher){
+    protected FetchDataCommand fetcher;
+    public FetchDataCommand(){
         this.fetcher = fetcher;
     }
     @Override
