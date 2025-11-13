@@ -1,12 +1,12 @@
-public class SaveResultsCommand implements Command{
-    protected ResultSaver results;
-    public void SaveResultsCommand(ResultSaver results) {
-        this.results = results;
+public class SaveResultsCommand implements Command {
+    private ResultSaver saver;
+
+    public SaveResultsCommand(ResultSaver saver){
+        this.saver = saver;
     }
+
     @Override
     public void execute() {
-
-    }
-    protected void saveResults(){
+        saver.saveResults();
     }
 }

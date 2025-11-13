@@ -1,12 +1,14 @@
-public class PredictionCommand implements Command{
-    protected PredictionModel predicts;
+public class PredictionCommand implements Command {
+    private PredictionModel predicts;
+
     public PredictionCommand(PredictionModel predicts){
-        this.predicts=predicts;
+        this.predicts = predicts;
     }
+
     @Override
     public void execute() {
-    }
-    protected void applyPredictionModel(){
+        predicts.applyPredictionModel();
     }
 }
+
 
