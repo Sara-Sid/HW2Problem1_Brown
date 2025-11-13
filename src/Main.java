@@ -6,9 +6,7 @@ public class Main {
         ResultSaver results = new ResultSaver();
         PredictionModel predicts = new PredictionModel();
 
-        //Create Commands
-        Command fetchData = new FetchDataCommand(FetchDataCommand fetcher);
-        Command pred
+
 
 
         System.out.println("Machine Learning Prediction: ");
