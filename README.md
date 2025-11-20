@@ -7,8 +7,8 @@ Modelling a Hurricane Prediction Service that executes the repeatable prediction
 The Template Method, HurricanePredictionTemplate, defines the overall workflow, while the concrete subclasses (StatisticalPrediction and MachineLearningPrediction) implement the specific steps.
 The Command Pattern encapsulates individual tasks (such as fetching data, running models, and saving results) as commands that a PredictionInvoker can schedule and execute.
 
-## Design Patterns Implemented
-# Template Method
+# Design Patterns Implemented
+## Template Method
 The HurricanePredictionTemplate abstract class defines the fixed workflow for predicting hurricanes:
 fetchData()
 preprocessData()
@@ -20,7 +20,7 @@ StatisticalPrediction
 MachineLearningPrediction
 Each provides its own behaviour, but follows the same sequence through the final method predictHurricane().
 
-# 2. Command Pattern
+## 2. Command Pattern
 Each task in the prediction workflow is wrapped in its own command class:
 FetchDataCommand
 PredictionCommand
@@ -71,18 +71,18 @@ Base abstract workflow class
 StatisticalPrediction
 MachineLearningPrediction
 
-# Command Pattern Classes
+## Command Pattern Classes
 Command (interface)
 FetchDataCommand
 PredictionCommand
 SaveResultsCommand
 
-# Receiver Classes
+## Receiver Classes
 WeatherDataFetcher
 PredictionModel
 ResultSaver
 
-# Workflow Overview
+## Workflow Overview
 Steps Defined by Template Method
 fetchData(): Retrieve necessary data
 preprocessData(): Prepare and clean data
@@ -90,7 +90,7 @@ applyPredictionModel(): Run the forecasting model
 postprocessResults(): Save or process results
 Subclasses override these methods to provide custom behaviour.
 
-# Commands in the System
+## Commands in the System
 Each task is wrapped in a reusable command:
 FetchDataCommand → calls WeatherDataFetcher.fetch()
 PredictionCommand → runs PredictionModel.predict()
